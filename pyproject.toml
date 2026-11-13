@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frequency-operator-study"
+version = "0.1.0"
+description = "Reproducible first-order aggregate frequency-response and PI-DeepONet pipeline"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23", "pandas>=1.5", "matplotlib>=3.5", "torch>=2.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+frequency-study = "frequency_study.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
